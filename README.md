@@ -1,5 +1,5 @@
 # EtchAGrid
-#Please note I am not yet media-ready!
+Please note I am not yet media-ready!
 
 A little etch-a-sketch style project.
 
