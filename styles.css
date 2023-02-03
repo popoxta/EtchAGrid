@@ -56,7 +56,10 @@ button{
     border-style: none;
     border-radius: 15px;
     padding: 8px;
-
+}
+button:hover{
+    background-color: #90c4e7;
+    color: aliceblue;
 }
 * {
     /*border: 1px solid lightblue;*/
