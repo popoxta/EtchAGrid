@@ -1,0 +1,15 @@
+body {
+    display: flex;
+    place-content: center center;
+}
+#sketch-box {
+    width: 800px;
+    height: 800px;
+    display: flex;
+    flex-wrap: wrap;
+    border: 1px solid lightblue;
+}
+
+* {
+    /*border: 1px solid lightblue;*/
+}
