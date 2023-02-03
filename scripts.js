@@ -27,6 +27,10 @@ function createSquares(squares) {
         newBox.setAttribute('style',
             `width:${BOX_WIDTH}px;height:${BOX_WIDTH}px;background-color: aliceblue;`)
         container.appendChild(newBox)
+
+        newBox.addEventListener('mouseover', () => {
+            newBox.style.backgroundColor = 'lightpink'
+        })
     }
 }
 
