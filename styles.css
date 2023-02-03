@@ -2,25 +2,60 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    font-family: "Roboto Thin", sans-serif;
+    color: #62adda;
 }
 #selector-container{
-    width: 60%;
     display: flex;
     justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
 }
 #main-container {
     display: flex;
     place-content: center center;
 }
 #sketch-box {
-    width: 800px;
-    height: 800px;
+    width: 600px;
+    height: 600px;
     display: flex;
     flex-wrap: wrap;
-    border: 1px solid lightblue;
+    border: 2px solid lightblue;
 }
 h1{
-    font-family: "Roboto Thin", sans-serif;
+    font-size: 3em;
+    margin-bottom: 0;
+}
+h3{
+    color: #90c4e7;
+}
+span{
+    color: lightpink;
+    font-size: 1.5em;
+}
+input[type="range"] {
+    align-self: center;
+    -webkit-appearance: none;
+    border-radius: 15px;
+    background-color: aliceblue;
+    height: 15px;
+}
+input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    background-color: lightpink;
+}
+button{
+    font-size: 1em;
+    font-weight: bold;
+    background-color: aliceblue;
+    color: #62adda;
+    border-style: none;
+    border-radius: 15px;
+    padding: 8px;
+
 }
 * {
     /*border: 1px solid lightblue;*/

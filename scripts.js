@@ -7,11 +7,17 @@ VIA INPUT (and button)
     button will take the input and run function to render boxes (div squares)
 
 Squares will be rendered onto the screen
+    clear all previous squares
+
     js function - for loop will contain ;
         spawning of boxes
         appending to container box
 
-COLOR/HOVER TBA
+    addition of event listener appended to each box upon creation
+    on mouseover;
+        if bg = aliceblue (std)
+            bg color will become lightpink on mouseover
+            and vice versa. :-)
  */
 function getSquares(){
     const userOption = document.getElementById('squares')
@@ -19,19 +25,19 @@ function getSquares(){
     createSquares(squaresSelected)
 }
 function createSquares(squares) {
-    const TOTAL_SQUARES = squares * squares
-    const BOX_WIDTH = 800 / squares
+    const totalSquares = squares * squares
+    const boxWidth = 600 / squares
 
 
     //text content reset to remove children
     const container = document.getElementById('sketch-box')
     container.textContent = ""
 
-    for (let i = 0; i < TOTAL_SQUARES; i++) {
+    for (let i = 0; i < totalSquares; i++) {
 
         let newBox = document.createElement('div')
         newBox.setAttribute('style',
-            `width:${BOX_WIDTH}px;height:${BOX_WIDTH}px;background-color: aliceblue;`)
+            `width:${boxWidth}px;height:${boxWidth}px;background-color: aliceblue;`)
         container.appendChild(newBox)
 
         newBox.addEventListener('mouseover', () => {
@@ -40,7 +46,6 @@ function createSquares(squares) {
             } else {
                 newBox.style.backgroundColor = 'aliceblue'
             }
-
         })
     }
 }
