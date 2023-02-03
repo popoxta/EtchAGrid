@@ -13,13 +13,19 @@ Squares will be rendered onto the screen
 
 COLOR/HOVER TBA
  */
-const SQUARES = 64
-const container = document.getElementById('sketch-box')
-
-///SQUARES LOGIC YAY
+function getSquares(){
+    const userOption = document.getElementById('squares')
+    const squaresSelected = userOption.value
+    createSquares(squaresSelected)
+}
 function createSquares(squares) {
     const TOTAL_SQUARES = squares * squares
     const BOX_WIDTH = 800 / squares
+
+
+    //text content reset to remove children
+    const container = document.getElementById('sketch-box')
+    container.textContent = ""
 
     for (let i = 0; i < TOTAL_SQUARES; i++) {
 
@@ -29,9 +35,16 @@ function createSquares(squares) {
         container.appendChild(newBox)
 
         newBox.addEventListener('mouseover', () => {
-            newBox.style.backgroundColor = 'lightpink'
+            if(newBox.style.backgroundColor === 'aliceblue'){
+                newBox.style.backgroundColor = 'lightpink'
+            } else {
+                newBox.style.backgroundColor = 'aliceblue'
+            }
+
         })
     }
 }
 
-createSquares(SQUARES)
+//main functionality
+const generateBtn = document.getElementById('generate-squares')
+generateBtn.addEventListener("click", getSquares)
